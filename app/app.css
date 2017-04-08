@@ -1,25 +1,55 @@
 /* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+.copyright {
+    font-size: 12px;
 }
 
-.menu:before {
-  content: "[";
+.logo {
+    float: left;
 }
 
-.menu:after {
-  content: "]";
+.logo img {
+    margin-top: -12px;
+    margin-right: 10px;
 }
 
-.menu > li {
-  display: inline;
+.info-circle {
+    float: left;
+    font-size: 50px;
+    margin-right: 10px;
 }
 
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.app-body {
+    padding: 51px 0;
+}
+
+.open-link {
+    float: right;
+}
+
+h3 {
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .navbar-header {
+        padding-top: 7px;
+    }
+
+    img {
+        height: 30px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 800px) {
+    .list-group .btn {
+        margin: 40px 10px 0 10px;
+    }
+
+    .info-text {
+        font-size: 30px;
+    }
 }

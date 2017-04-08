@@ -2,13 +2,23 @@
 
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
-
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+    'ngRoute',
+    'myApp.home',
+    'myApp.bible'
+])
+    .config(['$routeProvider', function ($routeProvider) {
+        $routeProvider.when('/home',  {
+            templateUrl: 'views/home.html',
+            controller: 'HomeCtrl'
+        });
+        $routeProvider.when('/bible',  {
+            templateUrl: 'views/app-links/bible.html',
+                controller: ['$window', function ($window) {
+                angular.element(document).ready(function () {
+                    $window.open(
+                        'tizenstore://ProductDetail/000000090674', '_blank'
+                    );
+                });
+            }]
+        });
+    }]);
