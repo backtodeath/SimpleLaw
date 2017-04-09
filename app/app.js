@@ -61,6 +61,6 @@ angular.module('myApp', [
                 });
             }]
         }).otherwise({
-            redirectTo: '/main'
+            redirectTo: '/home'
         })
     }]);
