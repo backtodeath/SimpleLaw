@@ -11,11 +11,11 @@ angular.module('myApp', [
     .run(['Analytics', function (Analytics) {
     }])
     .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/home', {
-            templateUrl: 'views/home.html',
-            controller: 'HomeCtrl'
-        });
-        $routeProvider.when('/bible', {
+        $routeProvider
+            .when('/home', {
+                templateUrl: 'views/home.html',
+                controller: 'HomeCtrl'
+            }).when('/bible', {
             template: '<div></div>',
             controller: ['$window', function ($window) {
                 angular.element(document).ready(function () {
@@ -24,8 +24,7 @@ angular.module('myApp', [
                     );
                 });
             }]
-        });
-        $routeProvider.when('/captain', {
+        }).when('/captain', {
             template: '<div></div>',
             controller: ['$window', function ($window) {
                 angular.element(document).ready(function () {
@@ -34,8 +33,7 @@ angular.module('myApp', [
                     );
                 });
             }]
-        });
-        $routeProvider.when('/football', {
+        }).when('/football', {
             template: '<div></div>',
             controller: ['$window', function ($window) {
                 angular.element(document).ready(function () {
@@ -44,8 +42,7 @@ angular.module('myApp', [
                     );
                 });
             }]
-        });
-        $routeProvider.when('/calc', {
+        }).when('/calc', {
             template: '<div></div>',
             controller: ['$window', function ($window) {
                 angular.element(document).ready(function () {
@@ -54,8 +51,7 @@ angular.module('myApp', [
                     );
                 });
             }]
-        });
-        $routeProvider.when('/lazors', {
+        }).when('/lazors', {
             template: '<div></div>',
             controller: ['$window', function ($window) {
                 angular.element(document).ready(function () {
@@ -64,5 +60,7 @@ angular.module('myApp', [
                     );
                 });
             }]
-        });
+        }).otherwise({
+            redirectTo: '/main'
+        })
     }]);
