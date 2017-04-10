@@ -19,13 +19,10 @@ angular.module('myApp', [
             template: '<div></div>',
             controller: ['$window', 'Analytics', function ($window, Analytics) {
                 angular.element(document).ready(function () {
-                    $window.open(
-                        'tizenstore://ProductDetail/000000086472', '_blank'
-                    );
+                    window.location.replace('http://tinyurl.com/mpecu7y');
                     Analytics.send({
                         hitType: 'event',
-                        eventCategory: 'bible',
-                        eventAction: 'Redirect'
+                        eventCategory: 'bible REDIRECT'
                     });
                 });
             }]
@@ -33,13 +30,10 @@ angular.module('myApp', [
             template: '<div></div>',
             controller: ['$window', 'Analytics', function ($window, Analytics) {
                 angular.element(document).ready(function () {
-                    $window.open(
-                        'tizenstore://ProductDetail/000000089387', '_blank'
-                    );
+                    window.location.replace('http://tinyurl.com/mtxccfl');
                     Analytics.send({
                         hitType: 'event',
-                        eventCategory: 'captain',
-                        eventAction: 'Redirect'
+                        eventCategory: 'captain REDIRECT'
                     });
                 });
             }]
@@ -47,13 +41,10 @@ angular.module('myApp', [
             template: '<div></div>',
             controller: ['$window', 'Analytics', function ($window, Analytics) {
                 angular.element(document).ready(function () {
-                    $window.open(
-                        'tizenstore://ProductDetail/000000086304', '_blank'
-                    );
+                    window.location.replace('http://tinyurl.com/klr76zc');
                     Analytics.send({
                         hitType: 'event',
-                        eventCategory: 'football',
-                        eventAction: 'Redirect'
+                        eventCategory: 'football REDIRECT'
                     });
                 });
             }]
@@ -61,13 +52,10 @@ angular.module('myApp', [
             template: '<div></div>',
             controller: ['$window', 'Analytics', function ($window, Analytics) {
                 angular.element(document).ready(function () {
-                    $window.open(
-                        'tizenstore://ProductDetail/000000089386', '_blank'
-                    );
+                    window.location.replace('http://tinyurl.com/kcstmo8');
                     Analytics.send({
                         hitType: 'event',
-                        eventCategory: 'calc',
-                        eventAction: 'Redirect'
+                        eventCategory: 'calc REDIRECT'
                     });
                 });
             }]
@@ -75,14 +63,11 @@ angular.module('myApp', [
             template: '<div></div>',
             controller: ['$window', 'Analytics', function ($window, Analytics) {
                 angular.element(document).ready(function () {
-                    $window.open(
-                        'tizenstore://ProductDetail/000000090674', '_blank'
-                    );
+                    window.location.replace('http://tinyurl.com/lbro87d');
                 });
                 Analytics.send({
                     hitType: 'event',
-                    eventCategory: 'lazors',
-                    eventAction: 'Redirect'
+                    eventCategory: 'lazors REDIRECT'
                 });
             }]
         }).otherwise({

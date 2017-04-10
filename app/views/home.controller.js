@@ -6,8 +6,7 @@ angular.module('myApp.home', [])
     $scope.bibleOpen = function () {
         Analytics.send({
             hitType: 'event',
-            eventCategory: 'bible',
-            eventAction: 'Click'
+            eventCategory: 'bible CLICK'
         });
         openLink('000000086472');
     };
@@ -15,8 +14,7 @@ angular.module('myApp.home', [])
     $scope.lazorsOpen = function () {
         Analytics.send({
             hitType: 'event',
-            eventCategory: 'lazors',
-            eventAction: 'Click'
+            eventCategory: 'lazors CLICK'
         });
         openLink('000000090674');
     };
@@ -24,8 +22,7 @@ angular.module('myApp.home', [])
     $scope.footballOpen = function () {
         Analytics.send({
             hitType: 'event',
-            eventCategory: 'football',
-            eventAction: 'Click'
+            eventCategory: 'football CLICK'
         });
         openLink('000000086304');
     };
@@ -33,8 +30,7 @@ angular.module('myApp.home', [])
     $scope.captainOpen = function () {
         Analytics.send({
             hitType: 'event',
-            eventCategory: 'captain',
-            eventAction: 'Click'
+            eventCategory: 'captain CLICK'
         });
         openLink('000000089387');
     };
@@ -43,8 +39,7 @@ angular.module('myApp.home', [])
     $scope.calcOpen = function () {
         Analytics.send({
             hitType: 'event',
-            eventCategory: 'calc',
-            eventAction: 'Click'
+            eventCategory: 'calc CLICK'
         });
         openLink('000000089386');
     };
