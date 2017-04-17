@@ -2,51 +2,68 @@
 
 angular.module('myApp.home', [])
 
-.controller('HomeCtrl', ['$window', '$scope', 'Analytics', function ($window, $scope, Analytics) {
-    $scope.bibleOpen = function () {
-        Analytics.send({
-            hitType: 'event',
-            eventCategory: 'bible CLICK'
-        });
-        openLink('000000086472');
-    };
+    .controller('HomeCtrl', ['$window', '$scope', 'Analytics', function ($window, $scope, Analytics) {
+        var url = 'http://localhost:8000/sdk/apps.json';
+        var appsProperties = localStorage.getItem('appsProperties');
+        var parsedProperties = appsProperties ? JSON.parse(localStorage.getItem('appsProperties')) : null;
+        var request = new XMLHttpRequest();
+        request.open('GET', url, true);
 
-    $scope.lazorsOpen = function () {
-        Analytics.send({
-            hitType: 'event',
-            eventCategory: 'lazors CLICK'
-        });
-        openLink('000000090674');
-    };
+        request.onload = function () {
+            if (request.status >= 200 && request.status < 400) {
+                var data = JSON.parse(request.responseText);
+                if(!parsedProperties || parsedProperties.version < data.version){
+                    localStorage.setItem('appsProperties', request.responseText);
+                }
+            }
+        };
 
-    $scope.footballOpen = function () {
-        Analytics.send({
-            hitType: 'event',
-            eventCategory: 'football CLICK'
-        });
-        openLink('000000086304');
-    };
+        request.send();
 
-    $scope.captainOpen = function () {
-        Analytics.send({
-            hitType: 'event',
-            eventCategory: 'captain CLICK'
-        });
-        openLink('000000089387');
-    };
+        $scope.bibleOpen = function () {
+            Analytics.send({
+                hitType: 'event',
+                eventCategory: 'bible CLICK'
+            });
+            openLink('000000086472');
+        };
+
+        $scope.lazorsOpen = function () {
+            Analytics.send({
+                hitType: 'event',
+                eventCategory: 'lazors CLICK'
+            });
+            openLink('000000090674');
+        };
+
+        $scope.footballOpen = function () {
+            Analytics.send({
+                hitType: 'event',
+                eventCategory: 'football CLICK'
+            });
+            openLink('000000086304');
+        };
+
+        $scope.captainOpen = function () {
+            Analytics.send({
+                hitType: 'event',
+                eventCategory: 'captain CLICK'
+            });
+            openLink('000000089387');
+        };
 
 
-    $scope.calcOpen = function () {
-        Analytics.send({
-            hitType: 'event',
-            eventCategory: 'calc CLICK'
-        });
-        openLink('000000089386');
-    };
+        $scope.calcOpen = function () {
+            Analytics.send({
+                hitType: 'event',
+                eventCategory: 'calc CLICK'
+            });
+            openLink('000000089386');
+        };
 
-    function openLink(appId) {
-        $window.open(
-            'tizenstore://ProductDetail/'+appId, '_blank'
-        );
-    }
-}]);
+        function openLink(appId) {
+            $window.open(
+                'tizenstore://ProductDetail/' + appId, '_blank'
+            );
+        }
+    }]);
