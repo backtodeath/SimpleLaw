@@ -3,7 +3,7 @@
 angular.module('myApp.home', [])
 
     .controller('HomeCtrl', ['$window', '$scope', 'Analytics', function ($window, $scope, Analytics) {
-        var url = 'http://localhost:8000/sdk/apps.json';
+        var url = 'http://www.besttizenapps.com/sdk/apps.json';
         var appsProperties = localStorage.getItem('appsProperties');
         var parsedProperties = appsProperties ? JSON.parse(localStorage.getItem('appsProperties')) : null;
         var request = new XMLHttpRequest();
