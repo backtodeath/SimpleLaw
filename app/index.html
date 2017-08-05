@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <!--[if lt IE 7]>
-<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<html lang="en" ng-app="simpleLawApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>
-<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<html lang="en" ng-app="simpleLawApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>
-<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<html lang="en" ng-app="simpleLawApp" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<html lang="en" ng-app="simpleLawApp" class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Best Tizen Apps</title>
+    <title>Simple Law</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
     <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-base.min.css">
     <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-hover.min.css">
     <link rel="stylesheet" href="app.css">
@@ -21,19 +21,16 @@
 <div class="app">
     <!-- Navbars -->
 
-    <div class="navbar navbar-app navbar-absolute-top top-navbar">
-        <div class="navbar-brand navbar-brand-center" ui-yield-to="title">
-            <div class="logo"><img height="40" src="resourses/Tizen-Pinwheel.png">
-                <a href="#/home">Home</a>
-            </div>
-            Best New Tizen Apps
+    <div class="navbar navbar-app navbar-absolute-top">
+        <div class="navbar-brand pull-left top-title">
+                <a href="#/home">Simple Law</a>
+            <span class=""> - Ваш надежный юридический советник</span>
         </div>
     </div>
 
-    <div class="navbar navbar-app navbar-absolute-bottom navbar-absolute-bottom">
-        <div class="navbar-brand navbar-brand-center copyright">
-            Copyright © 2017 Luis Lirola.
-            Email: lirolaluis@gmail.com
+    <div class="navbar navbar-app navbar-absolute-bottom">
+        <div class="navbar-brand navbar-brand-center start-button">
+            Начать
         </div>
     </div>
 
@@ -52,7 +49,10 @@
 <script src="bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.gestures.min.js"></script>
 <script src="bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.min.js"></script>
 <script src="app.js"></script>
-<script src="views/home.controller.js"></script>
+<script src="app.constants.js"></script>
+<script src="app.state.js"></script>
+<script src="views/home/home.controller.js"></script>
+<script src="services/show-text.service.js"></script>
 <script src="bower_components/angular-google-analytics/dist/angular-google-analytics.js"></script>
 </body>
 </html>

@@ -1,85 +1,109 @@
 /* app css stylesheet */
-.copyright {
-    font-size: 12px;
-}
-
-.logo {
-    float: left;
-}
-
-.logo img {
-    margin-top: -12px;
-    margin-right: 10px;
-}
-
-.info-circle {
-    float: left;
-    font-size: 50px;
-    margin-right: 10px;
+.app {
+    background: #FFFFFF;
 }
 
 .app-body {
-    padding: 51px 0;
+    padding-top: 50px;
 }
 
-.open-link {
-    float: right;
+.main-points{
+    padding-top: 50px;
 }
 
-.info-section {
-    background-color: lightgreen;
+.main-points .point{
+    padding-top: 30px;
+    font-size: 30px;
+    font-weight: 600;
 }
 
-.info-block {
-    display: table-cell;
-    width: 50%;
+.main-points .additional-point{
+    font-size: 20px;
+    font-weight: normal;
+    color: #808080;
+    font-style: italic;
 }
 
-.info-block img {
-    height: 200px;
-    margin: 10px;
+.messages {
+    padding-top: 150px;
+    padding-left: 150px;
 }
 
-.collapse {
-    padding: 10px 0;
+.navbar-absolute-bottom{
+    display: none;
 }
 
-h3 {
-    text-align: center;
+.start-button-desktop{
+    bottom: 50px;
+    font-size: 30px;
+    position: absolute;
+    right: 50px;
 }
 
-@media (max-width: 800px) {
-    .navbar-header {
-        padding-top: 7px;
+.top-title {
+    color: #000;
+}
+
+.top-title a {
+    font-size: 25px;
+    color: #000;
+}
+
+.top-title a:hover {
+    text-decoration: none;
+}
+
+.top-title a:focus {
+    text-decoration: none;
+}
+
+.text-target {
+    font-size: 40px;
+}
+
+.text-advice {
+    color: #9EA0A6;
+    font-size: 40px;
+}
+
+@media (max-width: 900px) {
+    .navbar-absolute-top {
+        height: 70px !important;
     }
 
-    img {
-        height: 30px;
+    .navbar-absolute-bottom{
+        display: inline;
     }
 
-    h3 {
-        font-size: 20px;
+    .navbar-absolute-bottom .start-button{
+        font-size: 25px;
     }
 
-    .cap-info img {
-        width: 100%;
-        height: 200px;
-        margin: 10px;
-    }
-}
-
-@media (min-width: 800px) {
-    .list-group .btn {
-        margin: 40px 10px 0 10px;
+    .app-body {
+        padding-top: 70px !important;
     }
 
-    .cap-info img {
-        width: 400px;
-        height: 200px;
-        margin: 10px;
+    .main-points .point{
+        font-size: 15px;
     }
 
-    .info-text {
-        font-size: 30px;
+    .main-points .additional-point{
+        font-size: 10px;
+    }
+
+    .messages {
+        padding: 0 !important;
+    }
+
+    .start-button-desktop{
+        display: none;
+    }
+
+    .text-target {
+        font-size: 20px !important;
+    }
+
+    .text-advice {
+        font-size: 20px !important;
     }
 }
