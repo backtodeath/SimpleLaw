@@ -11,7 +11,8 @@
         $routeProvider
             .when('/home', {
                 templateUrl: 'views/home/home.html',
-                controller: 'HomeController'
+                controller: 'HomeController',
+                reloadOnSearch: false
             }).otherwise({
             redirectTo: '/home'
         })

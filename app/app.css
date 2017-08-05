@@ -67,6 +67,10 @@
 }
 
 @media (max-width: 900px) {
+    .desktop-details{
+        display: none;
+    }
+
     .navbar-absolute-top {
         height: 70px !important;
     }
