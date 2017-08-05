@@ -7,21 +7,37 @@
     padding-top: 50px;
 }
 
-.main-points{
+.has-navbar-bottom .app-body {
+    padding-bottom: 0;
+}
+
+.main-points {
     padding-top: 50px;
 }
 
-.main-points .point{
+.point {
     padding-top: 30px;
     font-size: 30px;
     font-weight: 600;
 }
 
-.main-points .additional-point{
+.sidebar-right{
+    display: none;
+}
+
+.desktop-services a{
+    font-size: 14px!important;
+}
+
+.additional-point {
     font-size: 20px;
     font-weight: normal;
     color: #808080;
     font-style: italic;
+}
+
+.info-block{
+    padding-top: 50px;
 }
 
 .messages {
@@ -29,11 +45,19 @@
     padding-left: 150px;
 }
 
-.navbar-absolute-bottom{
+.navbar-absolute-bottom {
     display: none;
 }
 
-.start-button-desktop{
+.mobile-menu-button {
+    display: none;
+}
+
+.point-header {
+    font-size: 30px;
+}
+
+.start-button-desktop {
     bottom: 50px;
     font-size: 30px;
     position: absolute;
@@ -67,7 +91,7 @@
 }
 
 @media (max-width: 900px) {
-    .desktop-details{
+    .desktop-details {
         display: none;
     }
 
@@ -75,11 +99,15 @@
         height: 70px !important;
     }
 
-    .navbar-absolute-bottom{
+    .navbar-absolute-bottom {
         display: inline;
     }
 
-    .navbar-absolute-bottom .start-button{
+    .desktop-services{
+        display: none;
+    }
+
+    .navbar-absolute-bottom .start-button {
         font-size: 25px;
     }
 
@@ -87,11 +115,11 @@
         padding-top: 70px !important;
     }
 
-    .main-points .point{
+    .main-points .point {
         font-size: 15px;
     }
 
-    .main-points .additional-point{
+    .main-points .additional-point {
         font-size: 10px;
     }
 
@@ -99,7 +127,11 @@
         padding: 0 !important;
     }
 
-    .start-button-desktop{
+    .mobile-menu-button {
+        display: inline-block;
+    }
+
+    .start-button-desktop {
         display: none;
     }
 

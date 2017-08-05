@@ -1,22 +1,28 @@
 <div class="scrollable">
-    <h1 class="scrollable-header app-name">Leagues:</h1>
+    <h1 class="scrollable-header app-name">Разделы:</h1>
     <div class="scrollable-content">
-        <div class="panel-group"
-             ui-shared-state="myAccordion">
-            <div class="panel menu-items" ng-class="{'active-league' : league.name == currentLeague.name}" ng-repeat="league in leagues">
-                <div class="panel-heading" ui-set="{'myAccordion': league.id}">
-
-                    <h4 class="panel-title">
-                        {{league.name}}
-                    </h4>
+        <div class="panel-group">
+            <div class="panel menu-items">
+                <div class="panel-heading">
+                    <a href="#/about">О нас</a>
                 </div>
-
-                <div ui-if="myAccordion == {{league.id}}">
-                    <div class="panel-body">
-                        <a href="#/standings" class="btn btn-success" ng-click="getLeagueStandings(league)">
-                            Standings
-                        </a>
-                    </div>
+                <div class="panel-heading">
+                    <a href="#/faq">Faq</a>
+                </div>
+                <div class="panel-heading">
+                    <a href="#/prices">Цены</a>
+                </div>
+                <div class="panel-heading">
+                    <a href="#/how-it-works">Как это работает</a>
+                </div>
+                <div class="panel-heading">
+                    <a href="#/useful-info">Полезная информация</a>
+                </div>
+                <div class="panel-heading">
+                    <a href="#/services">Сервисы</a>
+                </div>
+                <div class="panel-heading">
+                    <a href="#/contacts">Контакты</a>
                 </div>
             </div>
         </div>

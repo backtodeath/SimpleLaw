@@ -18,24 +18,45 @@
     <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-hover.min.css">
     <link rel="stylesheet" href="app.css">
 </head>
-<body ui-prevent-touchmove-defaults>
+<body ui-prevent-touchmove-defaults
+      ng-app="simpleLawApp">
 <div ui-yield-to="modals"></div>
+
 <!-- Sidebars -->
 <div ng-include="'sidebar-right.html'" ui-track-as-search-param="true"
      class="sidebar sidebar-right"></div>
 
-<div class="app" ui-swipe-right="Ui.turnOn('uiSidebarRight')"
-     ui-swipe-left="Ui.turnOff('uiSidebarRight')">
-
+<div class="app">
     <!-- Navbars -->
     <div class="navbar navbar-app navbar-absolute-top">
         <div class="navbar-brand pull-left top-title">
             <a href="#/home">Simple Law</a>
             <span class="desktop-details"> - Ваш надежный юридический советник</span>
         </div>
-        <div class="btn-group pull-right" ui-yield-to="navbarAction">
+        <div class="desktop-services">
+            <div class="navbar-brand pull-right top-title">
+                <a href="#/contacts">Контакты</a>
+            </div>
+            <div class="navbar-brand pull-right top-title">
+                <a href="#/services">Сервисы</a>
+            </div>
+            <div class="navbar-brand pull-right top-title">
+                <a href="#/useful-info">Полезная информация</a>
+            </div>
+            <div class="navbar-brand pull-right top-title">
+                <a href="#/how-it-works">Как это работает</a>
+            </div>
+            <div class="navbar-brand pull-right top-title">
+                <a href="#/faq">Faq</a>
+            </div>
+            <div class="navbar-brand pull-right top-title">
+                <a href="#/about">О нас</a>
+            </div>
+        </div>
+
+        <div class="btn-group pull-right mobile-menu-button" ui-yield-to="navbarAction">
             <div ui-toggle="uiSidebarRight" class="btn sidebar-toggle">
-                <i class="fa fa-bars"></i> Menu
+                <i class="fa fa-bars"></i> Меню
             </div>
         </div>
     </div>
@@ -63,6 +84,7 @@
 <script src="app.constants.js"></script>
 <script src="app.state.js"></script>
 <script src="views/home/home.controller.js"></script>
+<script src="components/start-button.component.js"></script>
 <script src="services/show-text.service.js"></script>
 </body>
 </html>

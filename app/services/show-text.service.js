@@ -22,11 +22,15 @@
         }
 
         function showText(message, index){
+            var element = document.querySelector(target);
+            if(element === null){
+                return;
+            }
             if(index === 0){
-                angular.element(document.querySelector(target)).html('');
+                angular.element(element).html('');
             }
             if (index < message.length) {
-                document.querySelector(target).append(message[index++]);
+                element.append(message[index++]);
                 setTimeout(function () {
                     showText(message, index);
                 }, interval);
