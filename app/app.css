@@ -3,6 +3,10 @@
     background: #FFFFFF;
 }
 
+.app-content {
+    overflow: auto;
+}
+
 .app-body {
     padding-top: 50px;
 }
@@ -37,8 +41,7 @@
 }
 
 .info-block{
-    padding-top: 50px;
-    padding-left: 50px;
+    padding: 50px;
 }
 
 .messages {
@@ -61,7 +64,7 @@
 .start-button-desktop {
     bottom: 50px;
     font-size: 30px;
-    position: absolute;
+    position: fixed;
     right: 50px;
 }
 
