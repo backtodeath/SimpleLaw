@@ -16,6 +16,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui"/>
     <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-base.min.css">
     <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-hover.min.css">
+    <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-desktop.min.css">
     <link rel="stylesheet" href="app.css">
 </head>
 <body ui-prevent-touchmove-defaults
@@ -30,21 +31,21 @@
     <!-- Navbars -->
     <div class="navbar navbar-app navbar-absolute-top">
         <div class="navbar-brand pull-left top-title">
-            <a href="#/home">SimpleLaw</a>
+            <a href="#/home">Simple<strong>Law</strong></a>
         </div>
         <div class="desktop-services">
             <div class="navbar-brand pull-right top-title">
                 <a href="#/contacts">Контакты</a>
             </div>
             <div class="navbar-brand pull-right top-title">
-                <a href="#/services">Сервисы</a>
+                <a href="#/services">Услуги</a>
             </div>
             <div class="navbar-brand pull-right top-title">
                 <a href="#/useful-info">Полезная информация</a>
             </div>
-            <div class="navbar-brand pull-right top-title">
+            <!--<div class="navbar-brand pull-right top-title">
                 <a href="#/how-it-works">Как это работает</a>
-            </div>
+            </div>-->
             <div class="navbar-brand pull-right top-title">
                 <a href="#/faq">Faq</a>
             </div>
@@ -64,7 +65,7 @@
     </div>
     <div class="navbar navbar-app navbar-absolute-bottom">
         <div class="navbar-brand navbar-brand-center start-button">
-            Начать 2
+            Начать
         </div>
     </div>
     <!-- App Body -->
@@ -86,7 +87,7 @@
 <script type="text/javascript" src="app.constants.js"></script>
 <script type="text/javascript" src="app.state.js"></script>
 <script type="text/javascript" src="views/home/home.controller.js"></script>
-<script type="text/javascript" src="components/start-button.component.js"></script>
+<script type="text/javascript" src="components/start-button/start-button.component.js"></script>
 <script type="text/javascript" src="services/show-text.service.js"></script>
 </body>
 </html>

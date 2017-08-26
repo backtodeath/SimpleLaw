@@ -2,7 +2,7 @@
     'use strict';
 
     var startButton = {
-        templateUrl: 'components/start-button.template.html',
+        templateUrl: 'components/start-button/start-button.template.html',
         controller: StartButtonController,
         bindings: {
         }

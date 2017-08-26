@@ -23,10 +23,10 @@
                 templateUrl: 'views/services/services.html',
                 reloadOnSearch: false
             })
-            .when('/how-it-works', {
+           /* .when('/how-it-works', {
                 templateUrl: 'views/how-it-works/how-it-works.html',
                 reloadOnSearch: false
-            })
+            })*/
             .when('/faq', {
                 templateUrl: 'views/faq/faq.html',
                 reloadOnSearch: false
