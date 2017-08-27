@@ -1,20 +1,115 @@
-<div ui-content-for="modals">
-    <div class="modal" ui-if="modal1" ui-shared-state='modal1'>
-        <div class="modal-backdrop in"></div>
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button class="close"
-                            ui-turn-off="modal1">&times;</button>
-                    <h4 class="modal-title">Modal title</h4>
+<div class="modal" ui-if='order' ui-state='order'>
+    <div class="modal-backdrop in"></div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button ui-turn-off="order" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Отправка заявки</h4>
+            </div>
+            <div class="modal-body">
+                <div class="send-order">
+                    <form name="sendOrderForm" action="#">
+                        <div class="form-group">
+                            <div class="input-control add-type">
+                                <label>Ваш Email</label>
+                                <input required type="email" class="form-control"
+                                       ng-model="vm.email"
+                                       placeholder="Ваш Email"
+                                       name="email">
+                                <span class="custom-error"
+                                      ng-show="sendOrderForm.email.$error.required && sendOrderForm.email.$touched">
+                                    Заполните это поле.
+                                </span>
+                                <span class="error"
+                                      ng-show="sendOrderForm.email.$error.email && sendOrderForm.email.$touched">
+                                    Введён некорректный Email.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-control add-type">
+                                <label>Ваш Телефон</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="phone-addon">+38</span>
+                                    <input aria-describedby="phone-addon"
+                                           required ng-maxlength="14" ng-minlength="14" class="form-control"
+                                           ng-model="vm.phone"
+                                           placeholder="(999)999-9999"
+                                           name="phone"
+                                           formatted-phone>
+                                </div>
+                                <span class="custom-error"
+                                      ng-show="sendOrderForm.phone.$error.required && sendOrderForm.phone.$touched ">
+                                        Заполните это поле.
+                                    </span>
+                                <span class="custom-error"
+                                      ng-show="sendOrderForm.phone.$error.minlength && sendOrderForm.phone.$touched">
+                                        Слишком короткий номер. Формат: (999)999-9999
+                                    </span>
+                                <span class="custom-error"
+                                      ng-show="sendOrderForm.phone.$error.maxlength && sendOrderForm.phone.$touched">
+                                        Слишком длинный номер. Формат: (999)999-9999
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-control add-type">
+                                <label>Ваше Имя</label>
+                                <input required ng-maxlength="50" ng-minlength="3" class="form-control"
+                                       ng-model="vm.name"
+                                       placeholder="Ваше имя"
+                                       name="name">
+                                <span class="custom-error"
+                                      ng-show="sendOrderForm.name.$error.required && sendOrderForm.name.$touched ">
+                                        Заполните это поле.
+                                    </span>
+                                <span class="custom-error"
+                                      ng-show="sendOrderForm.name.$error.minlength && sendOrderForm.name.$touched">
+                                        Слишком короткое имя.
+                                    </span>
+                                <span class="custom-error"
+                                      ng-show="sendOrderForm.name.$error.maxlength && sendOrderForm.name.$touched">
+                                        Слишком длинное имя.
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-control add-type">
+                                <label>Вопрос</label>
+                                <textarea required ng-maxlength="500"
+                                          ng-minlength="10" class="form-control"
+                                          rows="5"
+                                          ng-model="vm.question"
+                                          placeholder="Вапрос"
+                                          name="question">
+                                </textarea>
+                                <span class="custom-error"
+                                      ng-show="sendOrderForm.question.$error.required && sendOrderForm.question.$touched ">
+                                        Заполните это поле.
+                                    </span>
+                                <span class="custom-error"
+                                      ng-show="sendOrderForm.question.$error.minlength && sendOrderForm.question.$touched">
+                                        Слишком короткий вопрос.
+                                    </span>
+                                <span class="custom-error"
+                                      ng-show="sendOrderForm.question.$error.maxlength && sendOrderForm.question.$touched">
+                                        Слишком длинный вопрос.
+                                    </span>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="modal-body">
-                    <p>Lorem ipsum ...</p>
-                </div>
-                <div class="modal-footer">
-                    <button ui-turn-off="modal1" class="btn btn-default">Close</button>
-                    <button ui-turn-off="modal1" class="btn btn-primary">Save changes</button>
-                </div>
+            </div>
+            <div class="modal-footer">
+                <button ng-disabled="sendOrderForm.$invalid"
+                        class="btn btn-success pull-left"
+                        id="send-order"
+                        ng-click="vm.sendOrder()">
+                    Отправить
+                </button>
+                <button ui-turn-off="order" class="btn btn-primary pull-right">Закрыть</button>
             </div>
         </div>
     </div>

@@ -4,8 +4,7 @@
     var startButton = {
         templateUrl: 'components/start-button/start-button.template.html',
         controller: StartButtonController,
-        bindings: {
-        }
+        bindings: {}
     };
 
     angular
@@ -16,9 +15,5 @@
 
     function StartButtonController() {
         var vm = this;
-
-        vm.click = function () {
-            console.log('asd');
-        };
     }
 })();

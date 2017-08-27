@@ -5,9 +5,9 @@
         .module('simpleLawApp')
         .factory('ShowText', ShowText);
 
-    ShowText.$inject = ['MESSAGES'];
+    ShowText.$inject = ['MESSAGES', '$rootScope'];
 
-    function ShowText(MESSAGES) {
+    function ShowText(MESSAGES, $rootScope) {
         var service = {
             showMessage: showMessage
         };
@@ -17,8 +17,10 @@
         var index = 0;
 
         function showMessage(interval) {
-            var message = getNextMessage();
-            showText(message, interval, 0);
+            if($rootScope.shouldShowText) {
+                var message = getNextMessage();
+                showText(message, interval, 0);
+            }
         }
 
         function showText(message, index){

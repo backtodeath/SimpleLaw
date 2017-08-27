@@ -17,10 +17,16 @@
             })
             .when('/about', {
                 templateUrl: 'views/about/about.html',
+                controller: function ($rootScope) {
+                    $rootScope.shouldShowText = true;
+                },
                 reloadOnSearch: false
             })
             .when('/services', {
                 templateUrl: 'views/services/services.html',
+                controller: function ($rootScope) {
+                    $rootScope.shouldShowText = true;
+                },
                 reloadOnSearch: false
             })
            /* .when('/how-it-works', {
@@ -29,14 +35,23 @@
             })*/
             .when('/faq', {
                 templateUrl: 'views/faq/faq.html',
+                controller: function ($rootScope) {
+                    $rootScope.shouldShowText = true;
+                },
                 reloadOnSearch: false
             })
             .when('/useful-info', {
                 templateUrl: 'views/useful-info/useful-info.html',
+                controller: function ($rootScope) {
+                    $rootScope.shouldShowText = true;
+                },
                 reloadOnSearch: false
             })
             .when('/contacts', {
                 templateUrl: 'views/contacts/contacts.html',
+                controller: function ($rootScope) {
+                    $rootScope.shouldShowText = true;
+                },
                 reloadOnSearch: false
             })
             .otherwise({
