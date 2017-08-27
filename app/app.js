@@ -10,7 +10,8 @@
         'angular-google-analytics'
     ]).config(['AnalyticsProvider', function (AnalyticsProvider) {
         AnalyticsProvider.setAccount('UA-97094037-1');
-    }]).run(['Analytics', function (Analytics) {
+    }]).run(['Analytics', '$rootScope', function (Analytics, $rootScope) {
+        $rootScope.shouldShowText = true;
     }]).directive('formattedPhone', function ($filter) {
         return {
             link: function (scope, element, attrs, ctrl) {
