@@ -29,10 +29,10 @@
                 },
                 reloadOnSearch: false
             })
-           /* .when('/how-it-works', {
-                templateUrl: 'views/how-it-works/how-it-works.html',
-                reloadOnSearch: false
-            })*/
+            /* .when('/how-it-works', {
+                 templateUrl: 'views/how-it-works/how-it-works.html',
+                 reloadOnSearch: false
+             })*/
             .when('/faq', {
                 templateUrl: 'views/faq/faq.html',
                 controller: function ($rootScope) {
